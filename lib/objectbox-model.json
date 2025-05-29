@@ -1,0 +1,306 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3269347209033024545",
+      "lastPropertyId": "5:1485552103261538121",
+      "name": "AppNotification",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:7721409513109204209",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1407419556064689487",
+          "name": "userId",
+          "type": 6
+        },
+        {
+          "id": "3:336510342749669540",
+          "name": "content",
+          "type": 9
+        },
+        {
+          "id": "4:1530139746218317980",
+          "name": "isRead",
+          "type": 1
+        },
+        {
+          "id": "5:1485552103261538121",
+          "name": "timestamp",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:6401421757924209321",
+      "lastPropertyId": "5:4667537640684452076",
+      "name": "CartItem",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:7363361498787586834",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7895260482948015237",
+          "name": "userId",
+          "type": 6
+        },
+        {
+          "id": "3:4923396508873505033",
+          "name": "itemId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:2308688243420620315",
+          "relationTarget": "Item"
+        },
+        {
+          "id": "4:7051254481073587968",
+          "name": "quantity",
+          "type": 6
+        },
+        {
+          "id": "5:4667537640684452076",
+          "name": "imagePath",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:8927301272745055066",
+      "lastPropertyId": "6:7989036081609901471",
+      "name": "ChatMessage",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:5717080467143426834",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:353683779644766846",
+          "name": "senderId",
+          "type": 6
+        },
+        {
+          "id": "3:941003883515325886",
+          "name": "receiverId",
+          "type": 6
+        },
+        {
+          "id": "4:7366550837859056368",
+          "name": "message",
+          "type": 9
+        },
+        {
+          "id": "5:8997896919723750834",
+          "name": "timestamp",
+          "type": 10
+        },
+        {
+          "id": "6:7989036081609901471",
+          "name": "isRead",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:1092214644037232725",
+      "lastPropertyId": "8:1288732064196752480",
+      "name": "Item",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:7408143913565866998",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4436327154916680752",
+          "name": "sellerId",
+          "type": 6
+        },
+        {
+          "id": "3:1857881403175435731",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "4:7287514790847835678",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "5:8870809213480289233",
+          "name": "price",
+          "type": 8
+        },
+        {
+          "id": "6:7982735575995492986",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "7:3457742171742775224",
+          "name": "isAvailable",
+          "type": 1
+        },
+        {
+          "id": "8:1288732064196752480",
+          "name": "createdAt",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:1441075179335847228",
+      "lastPropertyId": "7:3740804600891051123",
+      "name": "Transaction",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:692891130409758968",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5686266424815237288",
+          "name": "userId",
+          "type": 6
+        },
+        {
+          "id": "3:5704739069735124407",
+          "name": "itemId",
+          "type": 6
+        },
+        {
+          "id": "4:3125442990524042880",
+          "name": "totalAmount",
+          "type": 8
+        },
+        {
+          "id": "5:4858786736930734902",
+          "name": "paymentMethod",
+          "type": 9
+        },
+        {
+          "id": "6:8695349136481793593",
+          "name": "status",
+          "type": 9
+        },
+        {
+          "id": "7:3740804600891051123",
+          "name": "timestamp",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:7569973181565555122",
+      "lastPropertyId": "6:5272834143044633518",
+      "name": "User",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:7144161810285032692",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:228987368878097477",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "3:5734269325575318198",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "4:20328984242175117",
+          "name": "passwordHash",
+          "type": 9
+        },
+        {
+          "id": "5:4841641906093924957",
+          "name": "profilePictureUrl",
+          "type": 9
+        },
+        {
+          "id": "6:5272834143044633518",
+          "name": "walletBalance",
+          "type": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:1490136003230123271",
+      "lastPropertyId": "6:7922894858194500259",
+      "name": "WalletTransaction",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:1807291894596537465",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7920805816840935189",
+          "name": "userId",
+          "type": 6
+        },
+        {
+          "id": "3:3469080778932770986",
+          "name": "amount",
+          "type": 8
+        },
+        {
+          "id": "4:7700218501729881627",
+          "name": "method",
+          "type": 9
+        },
+        {
+          "id": "5:6918043268124109280",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "6:7922894858194500259",
+          "name": "timestamp",
+          "type": 10
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "7:1490136003230123271",
+  "lastIndexId": "1:2308688243420620315",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
